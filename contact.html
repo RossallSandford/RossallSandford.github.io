@@ -63,10 +63,11 @@
                         </div>
                     </div>
                     <div class="row block-9">
-                        <div class="col-md-6 order-md-last pr-md-5">
-                            <form action="#">
+                        <div class="col-md-6 order-md-last pr-md-5" ng-controller="contactController">
+                            <button ng-click="mailWithLocation()">do something</button>
+                            <form>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name">
+                                    <input type="text" class="form-control" placeholder="Your Name" ng-model="text">
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Your Email">
@@ -78,7 +79,8 @@
                                     <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                                    <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" id="submit" ng-click="mailWithLocation()">
+
                                 </div>
                             </form>
                         </div>
@@ -92,36 +94,13 @@
                 <div class="container px-md-5">
                     <div class="row mb-5">
                         <div class="col-md">
-                            <div class="ftco-footer-widget mb-4 ml-md-4">
-                                <h2 class="ftco-heading-2">Category</h2>
-                                <ul class="list-unstyled categories">
-                                    <li><a href="#">Photography <span>(6)</span></a></li>
-                                    <li><a href="#">Fashion <span>(8)</span></a></li>
-                                    <li><a href="#">Technology <span>(2)</span></a></li>
-                                    <li><a href="#">Travel <span>(2)</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md">
-                            <div class="ftco-footer-widget mb-4">
-                                <h2 class="ftco-heading-2">Archives</h2>
-                                <ul class="list-unstyled categories">
-                                    <li><a href="#">October 2018 <span>(6)</span></a></li>
-                                    <li><a href="#">September 2018 <span>(6)</span></a></li>
-                                    <li><a href="#">August 2018 <span>(8)</span></a></li>
-                                    <li><a href="#">July 2018 <span>(2)</span></a></li>
-                                    <li><a href="#">June 2018 <span>(7)</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md">
                             <div class="ftco-footer-widget mb-4">
                                 <h2 class="ftco-heading-2">Have a Questions?</h2>
                                 <div class="block-23 mb-3">
                                     <ul>
-                                        <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                                        <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-                                        <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                                        <li><span class="icon icon-map-marker"></span><span class="text">Creech St Michael, Taunton, Somerset</span></li>
+                                        <li><a href="tel://07792215739"><span class="icon icon-phone"></span><span class="text">07792 215739</span></a></li>
+                                        <li><a href="mailto:rsandford@hotmail.co.uk"><span class="icon icon-envelope"></span><span class="text">rsandford@hotmail.co.uk</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -162,6 +141,7 @@
     <script src="js/main.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRQnHdCAZZxz8WJl7ABI5bjSMZS3r8xvQ&callback=initMap"
             type="text/javascript"></script>
-
+    <script src="js/angular.min.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
