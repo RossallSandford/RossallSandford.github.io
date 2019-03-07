@@ -55,9 +55,13 @@
                     <div class="col-md-8 text text-center">
                         <div class="img mb-4" style="background-image: url(images/profile.png);"></div>
                         <div class="desc">
-                            <h2 class="subheading">Hello I'm</h2>
+                            <div ng-app="homeController">
+                                <div>
+                                    <h2 class="subheading">{{value | greet}}</h2>
+                                </div>
+                            </div>
                             <h1 class="mb-4">Rossall Sandford</h1>
-                            <p class="mb-4">I am the lead developer for a high performing scrum team with the United Kingdom Hydrographic Office.</p>
+                            <p class="mb-4">Lead developer for a high performing scrum team within the United Kingdom Hydrographic Office.</p>
                             <p><a href="about.html" class="btn-custom">More About Me <span class="ion-ios-arrow-forward"></span></a></p>
                         </div>
                     </div>
@@ -235,6 +239,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 </html>

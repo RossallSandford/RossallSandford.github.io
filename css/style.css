@@ -81,6 +81,10 @@ p {
   margin-top: 0;
   margin-bottom: 1rem; }
 
+pInLi {
+    color: #000000;
+}
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
