@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 jobs:
-- job: RestoreNBuild
+- job: RestoreBuildNTest
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -22,10 +22,10 @@ pool:
     inputs:
       command: 'build'
       projects: '**/*.csproj'
-      arguments: 'build'
     displayName: 'dotnet build all'
 
   - task: DotNetCoreCLI@2
     inputs:
       command: 'test'
       projects: '**/*tests*.csproj'
+    displayName: 'dotnet test all'
