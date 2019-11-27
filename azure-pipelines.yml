@@ -7,7 +7,7 @@ jobs:
 - job: RestoreBuildNTest
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-2019'
 
   steps:
 
