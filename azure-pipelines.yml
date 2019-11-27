@@ -16,9 +16,11 @@ pool:
       command: 'restore'
       projects: '**/*.csproj'
       feedsToUse: 'select'
+    displayName: 'dotnet restore all'
   
   - task: DotNetCoreCLI@2
     inputs:
       command: 'build'
       projects: '**/*.csproj'
       arguments: 'build'
+    displayName: 'dotnet build all'
