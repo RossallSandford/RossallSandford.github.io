@@ -24,3 +24,8 @@ pool:
       projects: '**/*.csproj'
       arguments: 'build'
     displayName: 'dotnet build all'
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'test'
+      projects: '**/*tests*.csproj'
