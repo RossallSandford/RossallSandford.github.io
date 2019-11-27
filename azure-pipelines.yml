@@ -11,10 +11,10 @@ pool:
 
   steps:
 
-- task: VSBuild@1
-  inputs:
-    solution: '**\*.sln'
-    restoreNugetPackages: true
+  - task: VSBuild@1
+    inputs:
+      solution: '**\*.sln'
+      restoreNugetPackages: true
 
   - task: DotNetCoreCLI@2
     inputs:
